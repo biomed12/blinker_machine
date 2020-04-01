@@ -35,7 +35,7 @@ const state_t* table[] =
 //5-top most initial handler
 int topmost_initial_handler(machine_t* mach)
 {
-	return TRANSIT(STATE(on));
+	return TRANSIT(on);
 }
 
 //6-create instance
@@ -71,7 +71,7 @@ DEFHANDLER(on)
 
 	case EVT_ID_TIMEOUT:
 	{
-		result = TRANSIT(STATE(off));
+		result = TRANSIT(off);
 	}
 		break;
 
@@ -97,7 +97,7 @@ DEFHANDLER(off)
 
 	case EVT_ID_TIMEOUT:
 	{
-		result = TRANSIT(STATE(on));
+		result = TRANSIT(on);
 	}
 		break;
 

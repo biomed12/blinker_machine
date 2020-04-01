@@ -15,7 +15,8 @@
 #define MAKE_NAKED_EVT(_id) {_id, 0, 0, 0, 0, 0}
 #define HANDLED() 0
 #define UNHANDLED() 1
-#define TRANSIT(_target_state) ((int)&_target_state)
+#define STATE2(x)   state_##x
+#define TRANSIT(_target_state) ((int)&STATE2(_target_state))
 
 //using these macros is optional.
 #define HANDLER(x) x##_shandler

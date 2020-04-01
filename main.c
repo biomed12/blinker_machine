@@ -117,7 +117,7 @@ int main(void)
 	//9-start machine
 	sm_start(&machine);
 
-	//10-post events sequentially, assume timeout occured
+	//10-post events sequentially, assume timeout event occured
 	event_t e = MAKE_NAKED_EVT(EVT_ID_TIMEOUT);
 	sm_process(&machine, e);
 	sm_process(&machine, e);
